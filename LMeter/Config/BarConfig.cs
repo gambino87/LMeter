@@ -65,17 +65,14 @@ namespace LMeter.Config
         public IConfigPage GetDefault()
         {
             BarConfig defaultConfig = new BarConfig();
-            defaultConfig.BarNameFontKey = FontsManager.DefaultRobotoFontKey;
-            defaultConfig.BarNameFontId = Singletons.Get<FontsManager>().GetFontIndex(FontsManager.DefaultRobotoFontKey);
+            defaultConfig.BarNameFontKey = FontsManager.DefaultSmallFontKey;
+            defaultConfig.BarNameFontId = Singletons.Get<FontsManager>().GetFontIndex(FontsManager.DefaultSmallFontKey);
 
-            defaultConfig.BarDataFontKey = FontsManager.DefaultRobotoFontKey;
-            defaultConfig.BarDataFontId = Singletons.Get<FontsManager>().GetFontIndex(FontsManager.DefaultRobotoFontKey);
+            defaultConfig.BarDataFontKey = FontsManager.DefaultSmallFontKey;
+            defaultConfig.BarDataFontId = Singletons.Get<FontsManager>().GetFontIndex(FontsManager.DefaultSmallFontKey);
 
-            defaultConfig.RankTextFontKey = FontsManager.DefaultRobotoFontKey;
-            defaultConfig.RankTextFontId = Singletons.Get<FontsManager>().GetFontIndex(FontsManager.DefaultRobotoFontKey);
-
-            defaultConfig.BarNameFontKey = FontsManager.DefaultRobotoFontKey;
-            defaultConfig.BarNameFontId = Singletons.Get<FontsManager>().GetFontIndex(FontsManager.DefaultRobotoFontKey);
+            defaultConfig.RankTextFontKey = FontsManager.DefaultSmallFontKey;
+            defaultConfig.RankTextFontId = Singletons.Get<FontsManager>().GetFontIndex(FontsManager.DefaultSmallFontKey);
 
             return defaultConfig;
         }
