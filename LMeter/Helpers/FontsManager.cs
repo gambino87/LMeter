@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
+
 namespace LMeter.Helpers
 {
     public struct FontData
@@ -52,10 +53,13 @@ namespace LMeter.Helpers
 
         public const string DalamudFontKey = "Dalamud Font";
 
-        public static readonly List<string> DefaultFontKeys = new List<string>() { "Expressway_24", "Expressway_20", "Expressway_16" };
+        public static readonly List<string> DefaultFontKeys = new List<string>() { "UbuntoMono_12", "UbuntoMono_18", "UbuntoMono_24", "UbuntoMono_36" };
         public static string DefaultBigFontKey => DefaultFontKeys[0];
         public static string DefaultMediumFontKey => DefaultFontKeys[1];
         public static string DefaultSmallFontKey => DefaultFontKeys[2];
+        public static string DefaultRobotoFontKey => DefaultFontKeys[3];
+   
+
 
         public FontsManager(UiBuilder uiBuilder, IEnumerable<FontData> fonts)
         {

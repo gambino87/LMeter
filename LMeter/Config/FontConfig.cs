@@ -6,6 +6,8 @@ using Dalamud.Interface;
 using ImGuiNET;
 using Newtonsoft.Json;
 using LMeter.Helpers;
+using Dalamud.Logging;
+
 
 namespace LMeter.Config
 {
@@ -33,11 +35,14 @@ namespace LMeter.Config
             foreach (string fontKey in FontsManager.DefaultFontKeys)
             {
                 string[] splits = fontKey.Split("_", StringSplitOptions.RemoveEmptyEntries);
+                PluginLog.Warning("This is a warning message. (Under String)");
                 if (splits.Length == 2 && int.TryParse(splits[1], out int size))
                 {
                     FontData newFont = new FontData(splits[0], size, false, false);
                     string key = FontsManager.GetFontKey(newFont);
                     this.Fonts.Add(key, newFont);
+                    PluginLog.Warning($"This is a warning message. {key} {newFont.Name} {newFont.Size} (Inside If)");
+
                 }
             }
         }
